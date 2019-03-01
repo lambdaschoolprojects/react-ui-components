@@ -1,13 +1,19 @@
 .buttontainer {
   display: flex;
-  flex-grow: 1;
   justify-content: stretch;
   flex-wrap: wrap;
   width: 600px;
   border: 1px solid black;
 }
 
-button {
+.buttonRow {
+  display: flex;
   width: 100%;
+  justify-content: stretch;
+}
+
+button {
   background-color: #a20623;
+  height: 94px;
+  min-width: 25%;
 }
