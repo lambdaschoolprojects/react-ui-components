@@ -2,7 +2,7 @@
   display: flex;
   justify-content: stretch;
   flex-wrap: wrap;
-  width: 600px;
+  width: 456px;
   border: 1px solid black;
 }
 
@@ -16,4 +16,5 @@ button {
   background-color: #a20623;
   height: 94px;
   min-width: 25%;
+  border: 2px outset darkgrey;
 }

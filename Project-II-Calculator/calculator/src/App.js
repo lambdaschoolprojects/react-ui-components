@@ -3,30 +3,49 @@ import NumberButton from "./components/ButtonComponents/NumberButton";
 import ActionButton from "./components/ButtonComponents/ActionButton";
 import ButtonContainer from "./components/ButtonComponents/ButtonContainer";
 import Button from "./components/ButtonComponents/Button";
+import CalculatorDisplay from "./components/DisplayComponents/CalculatorDisplay";
+
+import "./App.css";
 
 const App = () => {
   return (
     <div style={{ margin: "50px" }}>
+      <CalculatorDisplay />
       <ButtonContainer>
         <div className={"buttonRow"}>
           <Button value={"Clear"} width={"3"} bgColor={"white"} />
-          <Button value={"÷"} bgColor={"red"} textColor={"white"} />
+          <Button value={"÷"} bgColor={"#A80025"} textColor={"white"} />
         </div>
         <div className={"buttonRow"}>
           {renderButtons(7, 9)}
-          <Button value={"X"} width={"1"} bgColor={"red"} textColor={"white"} />
+          <Button
+            value={"X"}
+            width={"1"}
+            bgColor={"#A80025"}
+            textColor={"white"}
+          />
         </div>
         <div className={"buttonRow"}>
           {renderButtons(4, 6)}
-          <Button value={"-"} width={"1"} bgColor={"red"} textColor={"white"} />
+          <Button
+            value={"-"}
+            width={"1"}
+            bgColor={"#A80025"}
+            textColor={"white"}
+          />
         </div>
         <div className={"buttonRow"}>
           {renderButtons(1, 3)}
-          <Button value={"+"} width={"1"} bgColor={"red"} textColor={"white"} />
+          <Button
+            value={"+"}
+            width={"1"}
+            bgColor={"#A80025"}
+            textColor={"white"}
+          />
         </div>
         <div className={"buttonRow"}>
           <Button value={"0"} width={"3"} bgColor={"white"} />
-          <Button value={"="} bgColor={"red"} textColor={"white"} />
+          <Button value={"="} bgColor={"#A80025"} textColor={"white"} />
         </div>
       </ButtonContainer>
     </div>
