@@ -1,0 +1,13 @@
+.buttontainer {
+  display: flex;
+  flex-grow: 1;
+  justify-content: stretch;
+  flex-wrap: wrap;
+  width: 600px;
+  border: 1px solid black;
+}
+
+button {
+  width: 100%;
+  background-color: #a20623;
+}

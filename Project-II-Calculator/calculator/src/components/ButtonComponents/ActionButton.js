@@ -1,7 +1,7 @@
 import React from "react";
 import "./Button.scss";
 
-const ActionButton = ({ action, value }) => {
+const ActionButton = ({ action, value, width }) => {
   return <button>{value}</button>;
 };
 
