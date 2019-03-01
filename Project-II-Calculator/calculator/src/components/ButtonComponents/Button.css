@@ -1,9 +1,12 @@
+html {
+  box-sizing: border-box;
+}
 .buttontainer {
   display: flex;
   justify-content: stretch;
   flex-wrap: wrap;
   width: 456px;
-  border: 1px solid black;
+  border: 1px solid darkgrey;
 }
 
 .buttonRow {
@@ -16,5 +19,5 @@ button {
   background-color: #a20623;
   height: 94px;
   min-width: 25%;
-  border: 2px outset darkgrey;
+  border: 2px solid darkgrey;
 }

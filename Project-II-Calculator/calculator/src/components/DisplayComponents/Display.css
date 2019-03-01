@@ -1,11 +1,10 @@
 .display {
   height: 120px;
-  width: 456px;
+  width: 458px;
   background-color: #292929;
   color: white;
   font-size: 1.2rem;
-  border: 2px outset darkgrey;
-  padding: 0 3px;
+  border: 3px solid darkgrey;
   box-sizing: border-box;
 }
 
