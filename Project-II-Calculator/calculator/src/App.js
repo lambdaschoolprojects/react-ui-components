@@ -40,6 +40,7 @@ class App extends Component {
         newState = 0;
         break;
       case "=":
+        // eslint-disable-next-line
         newState = eval(this.state.output) + "";
         if (newState === "0") newState = 0;
         break;
