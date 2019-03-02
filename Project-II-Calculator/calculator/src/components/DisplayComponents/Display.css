@@ -12,6 +12,7 @@
   margin-right: 10px;
   color: white;
   font-size: 4rem;
+  overflow: hidden;
 }
 
 html {
