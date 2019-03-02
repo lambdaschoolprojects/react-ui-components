@@ -16,16 +16,16 @@ class App extends Component {
     for (
       let i = min;
       i <= max;
-      i++,
-        buttons.push(
-          <Button
-            onButtonClick={this.onButtonClick}
-            display={i}
-            width={"2"}
-            key={i}
-            bgColor={"white"}
-          />
-        )
+      buttons.push(
+        <Button
+          onButtonClick={this.onButtonClick}
+          display={i}
+          width={"2"}
+          key={i}
+          bgColor={"white"}
+        />
+      ),
+        i++
     );
 
     return buttons;
