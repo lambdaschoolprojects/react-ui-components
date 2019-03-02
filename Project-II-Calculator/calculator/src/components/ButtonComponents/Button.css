@@ -22,4 +22,18 @@ button {
   border: 2px solid darkgrey;
   font-size: 2.3rem;
   font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: contrast(25%);
+}
+
+button:active {
+  filter: none;
+  background-color: gold;
+}
+
+button:focus {
+  background-color: gold;
 }

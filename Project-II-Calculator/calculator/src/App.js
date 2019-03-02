@@ -7,35 +7,63 @@ import CalculatorDisplay from "./components/DisplayComponents/CalculatorDisplay"
 import "./App.css";
 
 class App extends Component {
+  state = {
+    output: 0
+  };
   renderButtons = (min, max) => {
     let buttons = [];
 
     for (
       let i = min;
       i <= max;
-      i++, buttons.push(<Button value={i} width={"2"} bgColor={"white"} />)
+      i++,
+        buttons.push(
+          <Button
+            onButtonClick={this.onButtonClick}
+            display={i}
+            width={"2"}
+            bgColor={"white"}
+          />
+        )
     );
 
     return buttons;
   };
+
+  onButtonClick = value => {
+    let newState = this.state.output + value;
+    this.setState({
+      output: newState
+    });
+  };
+
   render() {
     return (
       <div style={{ margin: "50px" }}>
-        <CalculatorDisplay />
+        <CalculatorDisplay display={this.state.output} />
         <ButtonContainer>
           <div className={"buttonRow"}>
             <Button
-              value={"Clear"}
+              onButtonClick={this.onButtonClick}
+              display={"Clear"}
               width={"3"}
               bgColor={"white"}
               extrastyles={{ fontWeight: "normal" }}
             />
-            <Button value={"÷"} bgColor={"#A80025"} textColor={"white"} />
+            <Button
+              onButtonClick={this.onButtonClick}
+              display={"÷"}
+              value={"/"}
+              bgColor={"#A80025"}
+              textColor={"white"}
+            />
           </div>
           <div className={"buttonRow"}>
             {this.renderButtons(7, 9)}
             <Button
-              value={"X"}
+              onButtonClick={this.onButtonClick}
+              display={"X"}
+              value={"*"}
               width={"1"}
               bgColor={"#A80025"}
               textColor={"white"}
@@ -44,7 +72,8 @@ class App extends Component {
           <div className={"buttonRow"}>
             {this.renderButtons(4, 6)}
             <Button
-              value={"-"}
+              onButtonClick={this.onButtonClick}
+              display={"-"}
               width={"1"}
               bgColor={"#A80025"}
               textColor={"white"}
@@ -53,15 +82,26 @@ class App extends Component {
           <div className={"buttonRow"}>
             {this.renderButtons(1, 3)}
             <Button
-              value={"+"}
+              onButtonClick={this.onButtonClick}
+              display={"+"}
               width={"1"}
               bgColor={"#A80025"}
               textColor={"white"}
             />
           </div>
           <div className={"buttonRow"}>
-            <Button value={"0"} width={"3"} bgColor={"white"} />
-            <Button value={"="} bgColor={"#A80025"} textColor={"white"} />
+            <Button
+              onButtonClick={this.onButtonClick}
+              display={"0"}
+              width={"3"}
+              bgColor={"white"}
+            />
+            <Button
+              onButtonClick={this.onButtonClick}
+              display={"="}
+              bgColor={"#A80025"}
+              textColor={"white"}
+            />
           </div>
         </ButtonContainer>
       </div>
