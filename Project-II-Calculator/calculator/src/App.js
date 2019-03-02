@@ -40,6 +40,7 @@ class App extends Component {
         break;
       case "=":
         newState = eval(this.state.output) + "";
+        if (newState === "0") newState = 0;
         break;
       case "0":
         if (this.state.output === 0) newState = 0;
