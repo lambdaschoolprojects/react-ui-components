@@ -33,6 +33,7 @@ class App extends Component {
 
   onButtonClick = value => {
     let newState;
+    let operators = "/*+-";
 
     switch (value) {
       case "Clear":
@@ -43,9 +44,21 @@ class App extends Component {
         if (newState === "0") newState = 0;
         break;
       case "0":
-        if (this.state.output === 0) newState = 0;
-        else newState = this.state.output + value;
-        break;
+        if (this.state.output === 0) {
+          newState = 0;
+          break;
+        }
+      case "/":
+      case "*":
+      case "-":
+      case "+":
+        if (
+          this.state.output == "0" ||
+          operators.includes(this.state.output[this.state.output.length - 1])
+        ) {
+          newState = this.state.output;
+          break;
+        }
       default:
         newState = this.state.output + value;
     }
