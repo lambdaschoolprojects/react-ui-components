@@ -22,6 +22,7 @@ class App extends Component {
             onButtonClick={this.onButtonClick}
             display={i}
             width={"2"}
+            key={i}
             bgColor={"white"}
           />
         )
