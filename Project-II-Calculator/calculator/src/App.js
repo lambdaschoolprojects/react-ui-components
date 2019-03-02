@@ -48,17 +48,19 @@ class App extends Component {
           newState = 0;
           break;
         }
+      // fall through
       case "/":
       case "*":
       case "-":
       case "+":
         if (
-          this.state.output == "0" ||
+          this.state.output === "0" ||
           operators.includes(this.state.output[this.state.output.length - 1])
         ) {
           newState = this.state.output;
           break;
         }
+      // fall through
       default:
         newState = this.state.output + value + "";
     }
