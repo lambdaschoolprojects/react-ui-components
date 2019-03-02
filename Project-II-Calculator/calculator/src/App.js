@@ -60,7 +60,7 @@ class App extends Component {
           break;
         }
       default:
-        newState = this.state.output + value;
+        newState = this.state.output + value + "";
     }
     this.setState({
       output: newState
