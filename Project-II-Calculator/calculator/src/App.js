@@ -31,7 +31,18 @@ class App extends Component {
   };
 
   onButtonClick = value => {
-    let newState = this.state.output + value;
+    let newState;
+
+    switch (value) {
+      case "Clear":
+        newState = 0;
+        break;
+      case "=":
+        newState = eval(this.state.output);
+        break;
+      default:
+        newState = this.state.output + value;
+    }
     this.setState({
       output: newState
     });
