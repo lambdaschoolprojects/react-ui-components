@@ -1,0 +1,21 @@
+.display {
+  height: 120px;
+  width: 458px;
+  background-color: #292929;
+  border: 3px solid darkgrey;
+  box-sizing: border-box;
+}
+
+.display p {
+  text-align: right;
+  margin-top: 40px;
+  margin-right: 10px;
+  color: white;
+  font-size: 4rem;
+  overflow: hidden;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}

@@ -1,0 +1,39 @@
+html {
+  box-sizing: border-box;
+}
+.buttontainer {
+  display: flex;
+  justify-content: stretch;
+  flex-wrap: wrap;
+  width: 456px;
+  border: 1px solid darkgrey;
+}
+
+.buttonRow {
+  display: flex;
+  width: 100%;
+  justify-content: stretch;
+}
+
+button {
+  background-color: #a20623;
+  height: 94px;
+  min-width: 25%;
+  border: 2px solid darkgrey;
+  font-size: 2.3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: contrast(25%);
+}
+
+button:active {
+  filter: none;
+  background-color: gold;
+}
+
+button:focus {
+  background-color: gold;
+}
