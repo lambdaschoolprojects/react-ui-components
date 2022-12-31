@@ -5,8 +5,8 @@
   "dependencies": {
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-scripts": "1.1.4",
-    "sass-loader": "^7.1.0"
+    "react-scripts": "5.0.1",
+    "sass-loader": "^13.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
